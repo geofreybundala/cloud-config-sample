@@ -1,17 +1,3 @@
 spring:
   application:
     name: MASTER-CONFIG
-  profiles:
-    active: dev,mysql
-
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:2000/eureka/ # URL of the Eureka server
-    register-with-eureka: true  # The client will register itself with Eureka
-    fetch-registry: true        # The client will fetch the registry from the server
-  instance:
-    hostname: localhost          # Hostname for the client instance (could be dynamic)
-    prefer-ip-address: true      # Use the IP address instead of hostname in Eureka registration
-    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
