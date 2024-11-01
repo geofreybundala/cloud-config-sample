@@ -1,6 +1,6 @@
 spring:
   application:
-    name: foo1
+    name: MASTER-CONFIG
   profiles:
     active: dev,mysql
 
