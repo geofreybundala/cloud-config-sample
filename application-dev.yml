@@ -1,8 +1,10 @@
-server:
-  port: 8899
-
-spring:
-  datasource:
-    url: jdbc:mysql://localhost:3306/dev_db
-    username: dev_user
-    password: dev_password
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:2000/eureka/ # URL of the Eureka server
+    register-with-eureka: true  # The client will register itself with Eureka
+    fetch-registry: true        # The client will fetch the registry from the server
+  instance:
+    hostname: localhost          # Hostname for the client instance (could be dynamic)
+    prefer-ip-address: true      # Use the IP address instead of the hostname in the Eureka registration
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
