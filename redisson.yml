@@ -1,0 +1,6 @@
+redisson:
+  singleServerConfig:
+    address: "redis://localhost:6379"      
+    connectionPoolSize: 10                 # Connection pool size
+    connectionMinimumIdleSize: 5           # Minimum idle connections
+    timeout: 3000                          # Timeout in milliseconds
